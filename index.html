@@ -1,7 +1,27 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: "Inicio"
+---
+
+<h1>{{ page.title }}</h1>
+<ul>
+  {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%d-%m-%Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+
+<!-- Paginación -->
+{% if paginator.total_pages > 1 %}
+  <div>
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}">← Anterior</a>
+    {% endif %}
+    Página {{ paginator.page }} de {{ paginator.total_pages }}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}">Siguiente →</a>
+    {% endif %}
+  </div>
+{% endif %}

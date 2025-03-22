@@ -1,0 +1,11 @@
+title: "El Blog de N4p5t3r"
+description: "Reseñas de tecnología, programación y software."
+author: "N4p5t3r"
+baseurl: "" # Deja vacío si está en la raíz de GitHub Pages
+url: "https://rr-n4p5t3r.github.io/elblogden4p5t3r"
+permalink: /:year/:month/:day/:title/
+paginate: 5
+theme: minima
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
