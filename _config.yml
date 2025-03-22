@@ -9,3 +9,6 @@ theme: minima
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+collections:
+  posts:
+    output: true
